@@ -178,7 +178,7 @@ bridge=br0
 
 ###iptables rules
 
-1. ```
+```
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
@@ -187,10 +187,11 @@ iptables -A FORWARD -i wlan0 -o wlan1 -m state --state RELATED,ESTABLISHED -j AC
 iptables -A FORWARD -i wlan1 -o wlan0 -j ACCEPT
 ```
 
-2. automate on reboot ```sh -c "iptables-save > /etc/iptables.ipv4.nat"```
+automate on reboot ```sh -c "iptables-save > /etc/iptables.ipv4.nat"```
 
 ###Updatehostapd
-1. ```
+
+```
 wget http://adafruit-download.s3.amazonaws.com/adafruit_hostapd_14128.zip```
 unzip adafruit_hostapd_14128.zi`p
 mv /usr/sbin/hostapd /usr/sbin/hostapd.ORI`G
@@ -199,7 +200,7 @@ chmod 755 /usr/sbin/hostap`d
 /usr/sbin/hostapd /etc/hostapd/hostapd.con`f
 ```
 
-2. ctrl+c
+ctrl+c
 
 ###daemon
 ```

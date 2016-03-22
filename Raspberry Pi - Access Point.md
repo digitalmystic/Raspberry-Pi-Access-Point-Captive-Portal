@@ -192,12 +192,12 @@ automate on reboot ```sh -c "iptables-save > /etc/iptables.ipv4.nat"```
 ###Updatehostapd
 
 ```
-wget http://adafruit-download.s3.amazonaws.com/adafruit_hostapd_14128.zip```
-unzip adafruit_hostapd_14128.zi`p
-mv /usr/sbin/hostapd /usr/sbin/hostapd.ORI`G
-mv hostapd /usr/sbi`n
-chmod 755 /usr/sbin/hostap`d
-/usr/sbin/hostapd /etc/hostapd/hostapd.con`f
+wget http://adafruit-download.s3.amazonaws.com/adafruit_hostapd_14128.zip
+unzip adafruit_hostapd_14128.zip
+mv /usr/sbin/hostapd /usr/sbin/hostapd.ORIG
+mv hostapd /usr/sbin
+chmod 755 /usr/sbin/hostapd
+/usr/sbin/hostapd /etc/hostapd/hostapd.conf
 ```
 
 ctrl+c

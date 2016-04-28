@@ -20,9 +20,9 @@ This document outline a base instruction set for setting up a Raspberry Pi 2 wit
 1. A computer (we used a Mac for this example)
 2. Network connection (hardwire for Raspberry Pi)
 3. Software
-	* [ApplePi Baker](http://www.tweaking4all.com/?wpfb_dl=94)
-	* [Raspbian Jesse](https://downloads.raspberrypi.org/raspbian_latest) *(latest)*
-	* [iTerm 2](https://www.iterm2.com/) (or other terminal)
+   * [ApplePi Baker](http://www.tweaking4all.com/?wpfb_dl=94)
+   * [Raspbian Jesse](https://downloads.raspberrypi.org/raspbian_latest) *(latest)*
+   * [iTerm 2](https://www.iterm2.com/) (or other terminal)
 
 ---
 ##Setup
@@ -56,10 +56,10 @@ Once you have downloaded both the Raspbian image and ApplePi Baker
 4. Have another coffee
 5. Upgrade the Pi ```apt-get upgrade``` (optional)
 6. Configure your Pi ```raspi-config```
-	* expand root partition
-	* enable ssh 
-	* save / exit
-6. Once it's all done ```reboot now```
+   * expand root partition
+   * enable ssh 
+   * save / exit
+7. Once it's all done ```reboot now```
 
 ### Access Point Setup
 We will be working as super user, so in terminal 
@@ -87,12 +87,12 @@ subnet 192.168.42.0 netmask 255.255.255.0 {
 	option domain-name "local";
 	option domain-name-servers 8.8.8.8, 8.8.4.4;
 }	
-```	
+```
 
 * save the file (ctrl+x, type Y)
 * ```nano /etc/default/isc-dhcp-server``` 
-	* replace ```INTERFACES=""``` with ```INTERFACES="wlan1"```	* save the file (ctrl+x, type Y)
-	
+  * replace ```INTERFACES=""``` with ```INTERFACES="wlan1"```	* save the file (ctrl+x, type Y)
+
 #####wlan1 as static IP
 1. ```ifdown wlan1```
 2. ```nano /etc/network/interfaces```
@@ -144,8 +144,8 @@ iface wlan1 inet static
 
 up iptables-restore < /etc/iptables.ipv4.nat  
 ```
-4. ctrl+x y
-5. ```sudo ifconfig wlan1 192.168.42.1```
+1. ctrl+x y
+2. ```sudo ifconfig wlan1 192.168.42.1```
 
 ### Configure Point Setup
 1. ```nano /etc/hostapd/hostapd.conf```
@@ -165,10 +165,10 @@ auth_algs=1
 ignore_broadcast_ssid=0
 bridge=br0
 ```
-3. ctrl+x y
-4. ```nano /etc/default/hostapd```
-5. uncomment and edit ```#DAEMON_CONF=""``` to ```DAEMON_CONF="/etc/hostapd/hostapd.conf"```
-6. ctrl+x y
+1. ctrl+x y
+2. ```nano /etc/default/hostapd```
+3. uncomment and edit ```#DAEMON_CONF=""``` to ```DAEMON_CONF="/etc/hostapd/hostapd.conf"```
+4. ctrl+x y
 
 ### Configure NAT (Network Address Translation)
 1. ```nano /etc/sysctl.conf```
@@ -208,4 +208,4 @@ service hostapd start
 service isc-dhcp-server start
 update-rc.d hostapd enable 
 update-rc.d isc-dhcp-server enable
-```	
+```

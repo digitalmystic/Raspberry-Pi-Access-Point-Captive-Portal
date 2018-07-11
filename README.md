@@ -12,8 +12,8 @@ Ever wanted to **roll your own**, today, you'll learn how.
 
 Follow along with the additional readme files in the following order:
 
-[Access Point](Raspberry Pi - Access Point.md)
-* [Server Stack](Raspberry Pi - Apache MySQL PHP Wordpress.md)
-* [Virtual Servers](Raspberry Pi - Virtual Hosts.md)
+* [Access Point](https://github.com/32teeth/Raspberry-Pi-Access-Point-Captive-Portal/blob/master/Raspberry%20Pi%20-%20Access%20Point.md)
+* [Server Stack](https://github.com/32teeth/Raspberry-Pi-Access-Point-Captive-Portal/blob/master/Raspberry%20Pi%20-%20Apache%20MySQL%20PHP%20Wordpress.md)
+* [Virtual Servers](https://github.com/32teeth/Raspberry-Pi-Access-Point-Captive-Portal/blob/master/Raspberry%20Pi%20-%20Virtual%20Hosts.md)
 
 Additionally, you'll need to create some additional configurations for activating the Captive Portal portion of this experience. For now, you'll have enough to go on.

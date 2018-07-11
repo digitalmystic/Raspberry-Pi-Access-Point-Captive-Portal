@@ -12,7 +12,7 @@ Ever wanted to **roll your own**, today, you'll learn how.
 
 Follow along with the additional readme files in the following order:
 
-* [Access Point](Raspberry Pi - Access Point.md)
+[Access Point](Raspberry Pi - Access Point.md)
 * [Server Stack](Raspberry Pi - Apache MySQL PHP Wordpress.md)
 * [Virtual Servers](Raspberry Pi - Virtual Hosts.md)
 

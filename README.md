@@ -17,3 +17,15 @@ Follow along with the additional readme files in the following order:
 * [Virtual Servers](https://github.com/32teeth/Raspberry-Pi-Access-Point-Captive-Portal/blob/master/Raspberry%20Pi%20-%20Virtual%20Hosts.md)
 
 Additionally, you'll need to create some additional configurations for activating the Captive Portal portion of this experience. For now, you'll have enough to go on.
+
+## Quick build for Raspberry Pi 5
+
+If you want a ready‑to‑test image, flash the latest **Raspberry Pi OS Lite (64‑bit)** to a USB key or SD card using Raspberry Pi Imager. Boot the Pi, copy this repository and run the automated setup script:
+
+```bash
+git clone https://github.com/32teeth/Raspberry-Pi-Access-Point-Captive-Portal.git
+cd Raspberry-Pi-Access-Point-Captive-Portal
+sudo ./setup-captive-portal.sh
+```
+
+After the script finishes, reboot the device. It will broadcast a Wi‑Fi network named `PiAP` with a simple captive portal hosted by Apache.
